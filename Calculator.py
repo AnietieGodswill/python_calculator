@@ -1,38 +1,41 @@
-# Addition 
+# This function adds two numbers 
 def add(x, y):
-    return x+y
-#Subtraction
-def sub(x, y):
-    return x-y
-#Multiplication
+   return x + y
+
+# This function subtracts two numbers 
+def subtract(x, y):
+   return x - y
+
+# This function multiplies two numbers
 def multiply(x, y):
-    return x*y
-#Divides
-def div(x, y):
-    return x/y
+   return x * y
 
-#Call Print Action
-print("Select The Operation To Perform")
-print("1. Add")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
+# This function divides two numbers
+def divide(x, y):
+   return x / y
 
-while True:
-    choice = int(input("Enter The Choice (1/2/3/4): "))
-    num1 = float(input("Enter Number First"))
-    num2 = float(input("Enter Number Second:"))
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
 
-    if choice == 1:
-                print(num1, "+", num2, "=", add(num1, num2))
+# Take input from the user 
+choice = input("Enter choice(1/2/3/4):")
 
-    elif choice == 2:
-                print(num1, "-", num2, "=", sub(num1, num2))
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
 
-    elif choice == 3:
-                print(num1, "*", num2, "=", multiply(num1, num2))
+if choice == '1':
+   print(num1,"+",num2,"=", add(num1,num2))
 
-    elif choice == 4:
-                print(num1, "/", num2, "=", div(num1, num2))
-    else:   
-        print("Invalid Output")
+elif choice == '2':
+   print(num1,"-",num2,"=", subtract(num1,num2))
+
+elif choice == '3':
+   print(num1,"*",num2,"=", multiply(num1,num2))
+
+elif choice == '4':
+   print(num1,"/",num2,"=", divide(num1,num2))
+else:
+   print("Invalid input")
